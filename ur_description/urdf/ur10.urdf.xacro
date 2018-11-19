@@ -79,7 +79,8 @@
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/base.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/base.stl"/> -->
+          <box size="0.2 0.2 0.05"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="0.038" mass="${base_mass}">
@@ -112,7 +113,8 @@
       </visual>
       <collision>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/shoulder.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/shoulder.stl"/> -->
+          <cylinder radius="0.09" length="0.2"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="0.178" mass="${shoulder_mass}">
@@ -144,8 +146,10 @@
         </material>
       </visual>
       <collision>
+        <origin xyz="0.0 -0.045 0.3"/>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/upperarm.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/upperarm.stl"/> -->
+          <cylinder radius="0.09" length="0.8"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="${-a2}" mass="${upper_arm_mass}">
@@ -177,8 +181,10 @@
         </material>
       </visual>
       <collision>
+        <origin xyz="0.0 0.0 0.3"/>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/forearm.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/forearm.stl"/> -->
+          <cylinder radius="0.08" length="0.8"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="${-a3}" mass="${forearm_mass}">
@@ -210,8 +216,10 @@
         </material>
       </visual>
       <collision>
+        <origin xyz="0.0 0.11 0.0"/>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/wrist1.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/wrist1.stl"/> -->
+          <cylinder radius="0.06" length="0.10"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="0.12" mass="${wrist_1_mass}">
@@ -243,8 +251,10 @@
         </material>
       </visual>
       <collision>
+        <origin xyz="0.0 0.0 0.115" rpy="1.5707 0.0 0.0"/>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/wrist2.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/wrist2.stl"/> -->
+          <cylinder radius="0.058" length="0.13"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="0.12" mass="${wrist_2_mass}">
@@ -276,8 +286,10 @@
         </material>
       </visual>
       <collision>
+        <origin xyz="0.0 0.13 0.0" rpy="1.5707 0.0 0.0"/>
         <geometry>
-          <mesh filename="package://ur_description/meshes/ur10/collision/wrist3.stl"/>
+          <!-- <mesh filename="package://ur_description/meshes/ur10/collision/wrist3.stl"/> -->
+          <cylinder radius="0.06" length="0.03"/>
         </geometry>
       </collision>
       <xacro:cylinder_inertial radius="0.075" length="0.12" mass="${wrist_3_mass}">
